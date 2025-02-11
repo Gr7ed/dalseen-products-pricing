@@ -3,16 +3,14 @@ body {
      color: #333; 
     }
 
-/* .package-box {
-     background: #fff; padding: 20px; border-radius: 8px; border: 2px solid #ddd; margin-bottom: 15px; transition: 0.3s; 
-     color: #34AC72;
-    }
-.package-box:hover {
-     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
-    } */
-/* .result {
-     font-size: 22px; font-weight: bold; margin-top: 20px; color: #007bff; 
-    } */
+.card{
+  transition: 0.3s ease;
+}
+.card:hover{
+  border-color: #35AA73;
+  transform: scale(1.05);
+}
+
 .hidden {
      display: none; 
     }
