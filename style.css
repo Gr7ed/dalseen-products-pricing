@@ -1,15 +1,30 @@
 body {
-     background-color: #f8f9fa; 
-     color: #333; 
-    }
+  font-family: 'Tajawal', sans-serif;
+}
 
-.card{
-  transition: 0.3s ease;
+.card {
+  transition: transform 0.3s ease-in-out;
 }
-.card:hover{
-  border-color: #35AA73;
-  transform: scale(1.05);
+
+.card:hover {
+  transform: scale(1.02);
 }
+
+.select-btn {
+  font-size: 1rem;
+  padding: 10px;
+  transition: background 0.3s ease-in-out;
+}
+.select-btn:hover {
+  background-color: #343a40;
+  color: #fff;
+}
+
+.select-btn.selected {
+  background-color: #343a40;
+}
+
+
 
 .hidden {
      display: none; 
@@ -94,27 +109,8 @@ footer a:hover {
     border-top-right-radius: 4px;
   }  
 
-  /* Responsive Styles */
-  @media (max-width: 768px) {
-    .card {
-      padding: 15px;
-      margin: 0 15px;
-    }
-  }
 
-  @media (max-width: 480px) {
 
-    .card {
-      padding: 15px;
-      margin: 0 15px;
-    }
 
-    .card ul li {
-      font-size: 14px;
-    }
 
-    .card .cta {
-      width: 100%;
-      text-align: center;
-    }
-  }
+
