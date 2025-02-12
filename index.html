@@ -20,106 +20,152 @@
         <h2 class="text-center my-5 tajawal-extrabold"> اختر الباقة المناسبة لنشاطك التجاري </h2>
         <div class="row justify-content-center">
             <div class="card col-md-3 mx-3 my-5 shadow px-0 bg-body rounded" id="asasiyah">
+                <div class="radio-select text-center">
+                    <input type="radio" name="selectedPackage" value="asasiyah" id="radio-asasiyah">
+                    <label for="radio-asasiyah" class="cta">اختر هذه الباقة</label>
+                </div>
                 <div class="text-center background pt-2 rounded" >
-                        <h3 class="  my-4"> الباقة الأساسية <img src="imgs\check.png" alt="check"></h3>
-                        <img src="imgs/shamel-pack.jpg" class="img-fluid " alt="الباقة الأساسية">
+                    <h3 class="  my-4"> الباقة الأساسية <img src="imgs\check.png" alt="check"></h3>
+                    <img src="imgs/shamel-pack.jpg" class="img-fluid " alt="الباقة الأساسية">
                 </div>
                 <ul class="list-group list-group-flush mb-3 align-items-start">
-                        <li class="list-group-item" ><i class="bi bi-check-square icon-green"></i> شاشة لمس</li>
-                        <li class="list-group-item"><i class="bi bi-check-square icon-green"></i> طابعة حرارية</li>
-                        <li class="list-group-item"><i class="bi bi-check-square icon-green"></i> ماسح باركود</li>
-                        <li class="list-group-item"><i class="bi bi-check-square icon-green"></i> درج كاشير</li>
-                        <li class="list-group-item"><i class="bi bi-check-square icon-green"></i> نظام SAAED POS</li>
+                    <li class="list-group-item" ><i class="bi bi-check-square icon-green"></i> شاشة لمس</li>
+                    <li class="list-group-item"><i class="bi bi-check-square icon-green"></i> طابعة حرارية</li>
+                    <li class="list-group-item"><i class="bi bi-check-square icon-green"></i> ماسح باركود</li>
+                    <li class="list-group-item"><i class="bi bi-check-square icon-green"></i> درج كاشير</li>
+                    <li class="list-group-item"><i class="bi bi-check-square icon-green"></i> نظام SAAED POS</li>
                 </ul>
+                <div class="price-options">
+                    <div class="mb-2">
+                      <label for="duration-asasiyah" class="form-label">📅 مدة الاشتراك:</label>
+                      <select id="duration-asasiyah" class="form-select" onchange="updatePriceForPackage('asasiyah')">
+                        <option value="1">سنة واحدة</option>
+                        <option value="2">سنتان</option>
+                      </select>
+                    </div>
+                    <div class="mb-2">
+                      <label for="paymentType-asasiyah" class="form-label">💳 طريقة الدفع:</label>
+                      <select id="paymentType-asasiyah" class="form-select" onchange="updatePriceForPackage('asasiyah')">
+                        <option value="monthly">اشتراك شهري</option>
+                        <option value="cash">دفعة واحدة</option>
+                      </select>
+                    </div>
+                    <div class="result" id="price-asasiyah">💵 السعر: -</div>
+                </div>
             </div>
-            <div class="card d-flex flex-column col-md-3 mx-3 mb-4 mt-1 shadow bg-body px-0 rounded" id="shamela">
+            <div class="card d-flex flex-column col-md-3 mx-3 mb-4 mt-1 shadow bg-body px-0 rounded pb-2" id="shamela">
                 <b class="subscription-plans__best-label">مقترح <img width="32px" src="imgs\feedback.png" alt="recommended"></b>
+                <div class="radio-select text-center">
+                    <input type="radio" name="selectedPackage" value="shamela" id="radio-shamela">
+                    <label for="radio-shamela"  class="cta">اختر هذه الباقة</label>
+                </div>
                 <div class="text-center background pt-2" >
                     <h3 class=" my-4 "> الباقة الشاملة <img src="imgs\improvement.png" alt="improve"></h3>
                     <img src="imgs/shamel-pack.jpg" class="img-fluid " alt="الباقة الشاملة">
                 </div>
                 <ul class="list-group list-group-flush mb-3 align-items-start">
-                        <li class="list-group-item"><i class="bi bi-check-square icon-green"></i> شاشة لمس</li>
-                        <li class="list-group-item"><i class="bi bi-check-square icon-green"></i> طابعة حرارية</li>
-                        <li class="list-group-item"><i class="bi bi-check-square icon-green"></i> ماسح باركود</li>
-                        <li class="list-group-item"><i class="bi bi-check-square icon-green"></i> درج كاشير</li>
-                        <li class="list-group-item"><i class="bi bi-check-square icon-green"></i> جهاز كاشير متنقل</li>
-                        <li class="list-group-item"><i class="bi bi-check-square icon-green"></i> نظام SAAED POS</li>
-                        <li class="list-group-item"><i class="bi bi-check-square icon-green"></i> خدمة SAAED PAY</li>
+                    <li class="list-group-item"><i class="bi bi-check-square icon-green"></i> شاشة لمس</li>
+                    <li class="list-group-item"><i class="bi bi-check-square icon-green"></i> طابعة حرارية</li>
+                    <li class="list-group-item"><i class="bi bi-check-square icon-green"></i> ماسح باركود</li>
+                    <li class="list-group-item"><i class="bi bi-check-square icon-green"></i> درج كاشير</li>
+                    <li class="list-group-item"><i class="bi bi-check-square icon-green"></i> جهاز كاشير متنقل</li>
+                    <li class="list-group-item"><i class="bi bi-check-square icon-green"></i> نظام SAAED POS</li>
+                    <li class="list-group-item"><i class="bi bi-check-square icon-green"></i> خدمة SAAED PAY</li>
                 </ul>
+                <div class="price-options">
+                    <div class="mb-2">
+                      <label for="duration-shamela" class="form-label">📅 مدة الاشتراك:</label>
+                      <select id="duration-shamela" class="form-select" onchange="updatePriceForPackage('shamela')">
+                        <option value="1">سنة واحدة</option>
+                        <option value="2">سنتان</option>
+                      </select>
+                    </div>
+                    <div class="mb-2">
+                      <label for="paymentType-shamela" class="form-label">💳 طريقة الدفع:</label>
+                      <select id="paymentType-shamela" class="form-select" onchange="updatePriceForPackage('shamela')">
+                        <option value="monthly">اشتراك شهري</option>
+                        <option value="cash">دفعة واحدة</option>
+                      </select>
+                    </div>
+                    <div class="result" id="price-shamela">💵 السعر: -</div>
+                </div>
             </div>
             <div class="card col-md-3 mx-3 my-5 shadow px-0 bg-body rounded" id="mix">
+                <div class="radio-select text-center">
+                    <input type="radio" name="selectedPackage" value="mix" id="radio-mix" checked>
+                    <label for="radio-mix" class="text-center"  class="cta">اختر هذه الباقة</label>
+                </div>
                 <div class=" text-center background pt-2 rounded" >
                         <h3 class=" my-4"> باقة المكس <img src="imgs\tablet.png" alt="smart"></h3>
                         <img src="imgs/v3mix-pack.jpg" class="img-fluid " alt="باقة المكس">
                 </div>
                 <ul class="list-group list-group-flush mb-3 align-items-start">
-                        <li class="list-group-item"><i class="bi bi-check-square icon-green"></i> تابلت V3Mix</li>
-                        <li class="list-group-item"><i class="bi bi-check-square icon-green"></i> قاعدة (حامل) V3Mix</li>
-                        <li class="list-group-item"><i class="bi bi-check-square icon-green"></i> درج كاشير</li>
-                        <li class="list-group-item"><i class="bi bi-check-square icon-green"></i> نظام SAAED POS</li>
-                        <li class="list-group-item"><i class="bi bi-check-square icon-green"></i> خدمة SAAED PAY</li>
+                    <li class="list-group-item"><i class="bi bi-check-square icon-green"></i> تابلت V3Mix</li>
+                    <li class="list-group-item"><i class="bi bi-check-square icon-green"></i> قاعدة (حامل) V3Mix</li>
+                    <li class="list-group-item"><i class="bi bi-check-square icon-green"></i> درج كاشير</li>
+                    <li class="list-group-item"><i class="bi bi-check-square icon-green"></i> نظام SAAED POS</li>
+                    <li class="list-group-item"><i class="bi bi-check-square icon-green"></i> خدمة SAAED PAY</li>
                 </ul>
+                <div class="price-options">
+                    <div class="mb-2">
+                      <label for="duration-mix" class="form-label">📅 مدة الاشتراك:</label>
+                      <select id="duration-mix" class="form-select" onchange="updatePriceForPackage('mix')">
+                        <option value="1">سنة واحدة</option>
+                        <option value="2">سنتان</option>
+                      </select>
+                    </div>
+                    <div class="mb-2">
+                      <label for="paymentType-mix" class="form-label">💳 طريقة الدفع:</label>
+                      <select id="paymentType-mix" class="form-select" onchange="updatePriceForPackage('mix')">
+                        <option value="monthly">اشتراك شهري</option>
+                        <option value="cash">دفعة واحدة</option>
+                      </select>
+                    </div>
+                    <div class="result" id="price-mix">💵 السعر: -</div>
+                </div>
             </div>
-            <div class="card col-md-3 mx-3 my-4 shadow px-0 bg-body rounded" id="mobile">
+            <div class="card col-md-3 mx-3 my-4 shadow px-0 bg-body rounded pb-2" id="mobile">
+                <div class="radio-select text-center">
+                    <input type="radio" name="selectedPackage" value="mobile" id="radio-mobile">
+                    <label for="radio-mobile"  class="cta">اختر هذه الباقة</label>
+                </div>
                 <div class=" text-center background pt-2 rounded" >
                     <h3 class=" my-4"> باقة المحمول <img src="imgs\mobile.png" alt="mobile"></h3>
                     <img src="imgs/mobile-pack.jpg" class="img-fluid " alt="باقة المحمول">
                 </div>
                 <ul class="list-group list-group-flush mb-3 align-items-start">
-                        <li class="list-group-item"><i class="bi bi-check-square icon-green"></i> نظام SAAED POS للمبيعات والمخزون</li>
-                        <li class="list-group-item"><i class="bi bi-check-square icon-green"></i> نظام دفع الشبكة SAAED PAY</li>
+                    <li class="list-group-item"><i class="bi bi-check-square icon-green"></i> نظام SAAED POS للمبيعات والمخزون</li>
+                    <li class="list-group-item"><i class="bi bi-check-square icon-green"></i> نظام دفع الشبكة SAAED PAY</li>
                 </ul>
+                <div class="price-options">
+                    <div class="mb-2">
+                      <label for="duration-mobile" class="form-label">📅 مدة الاشتراك:</label>
+                      <select id="duration-mobile" class="form-select" onchange="updatePriceForPackage('mobile')">
+                        <option value="1">سنة واحدة</option>
+                        <option value="2">سنتان</option>
+                      </select>
+                    </div>
+                    <div class="mb-2">
+                      <label for="paymentType-mobile" class="form-label">💳 طريقة الدفع:</label>
+                      <select id="paymentType-mobile" class="form-select" onchange="updatePriceForPackage('mobile')">
+                        <option value="monthly">اشتراك شهري</option>
+                        <option value="cash">دفعة واحدة</option>
+                      </select>
+                    </div>
+                    <div class="result" id="price-mobile">💵 السعر: -</div>
+                </div>
             </div>
         </div>
 
 
-        <h2 class="text-center mt-4">📌 اختر الباقة المناسبة</h2>
-
-        <div class="row">
-            <div class="col-md-4">
-                <label for="package" class="form-label">🔹 اختر الباقة:</label>
-                <select id="package" class="form-select" onchange="updatePrice()">
-                    <option value="shamela">الباقة الشاملة</option>
-                    <option value="asasiyah">الباقة الأساسية</option>
-                    <option value="mobile">باقة المحمول</option>
-                    <option value="mix">باقة المكس</option>
-                </select>
-            </div>
-
-            <div class="col-md-4">
-                <label for="duration" class="form-label"> اختر المدة:📅 </label>
-                <select id="duration" class="form-select" onchange="updatePrice()">
-                    <option value="1">سنة واحدة</option>
-                    <option value="2">سنتان</option>
-                </select>
-            </div>
-
-            <div class="col-md-4">
-                <label for="paymentType" class="form-label">اختر طريقة الدفع:💳 </label>
-                <select id="paymentType" class="form-select" onchange="updatePrice()">
-                    <option value="monthly">اشتراك شهري</option>
-                    <option value="cash">دفعة واحدة</option>
-                </select>
-            </div>
+        <!-- Global Confirmation Button -->
+        <div class="text-center mt-2 mb-5 rounded background p-3">
+            <a id="globalConfirm" href="#" target="_blank" class="btn-custom">
+          ✅ للتواصل مع دال سين
+            </a>
         </div>
+      
 
-        <div class="h4 text-center mt-3 --bs-gray-dark" id="totalPrice">💵 السعر: -</div>
-
-        <button class="btn background-btn w-100 mt-3" onclick="showForm()">✅ تأكيد السعر وملء الطلب</button>
-
-        <form id="orderForm" class="hidden" onsubmit="submitForm(event)">
-            <h2 class="text-center mt-4">📞 أدخل معلومات التواصل  وحيتواصل معك موظف المبيعات </h2>
-            <div class="mt-3 max-width">
-                <label for="name" class="form-label">📝 الاسم:</label>
-                <input type="text" id="name" name="name" class="form-control" required>
-
-                <label for="phone" class="form-label mt-2">📞 رقم الهاتف:</label>
-                <input type="tel" id="phone" name="phone" class="form-control" required>
-            </div>
-
-            <button type="submit" class="btn btn-primary w-100 mt-3">📩 إرسال الطلب</button>
-        </form>
     </div>
 
     <footer>
@@ -132,56 +178,82 @@
     <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 
     <script>
-        (function(){
-            emailjs.init("kDKfoT3SxLp9hmS_f"); // Replace with your EmailJS Public Key
-        })();
-
-        window.onload = updatePrice; // Set price when page loads
-
-        function updatePrice() {
-            let packageType = document.getElementById("package").value;
-            let duration = parseInt(document.getElementById("duration").value);
-            let paymentType = document.getElementById("paymentType").value;
-            let price = 0;
-
-            const prices = {
-                shamela: { monthly: { 1: 349, 2: 249 }, cash: { 1: 3850, 2: 4750 } },
-                asasiyah: { monthly: { 1: 279, 2: 199 }, cash: { 1: 3200, 2: 4200 } },
-                mobile: { monthly: { 1: 149, 2: 119 }, cash: { 1: 1668, 2: 2666 } },
-                mix: { monthly: { 1: 399, 2: 299 }, cash: { 1: 4499, 2: 5299 } }
-            };
-
-            price = (paymentType === "monthly") ? prices[packageType].monthly[duration] : prices[packageType].cash[duration];
-
-            document.getElementById("totalPrice").innerHTML = `💵 السعر: ${price} ريال`;
-        }
-
-        function showForm() {
-            updatePrice();
-            document.getElementById("orderForm").classList.remove("hidden");
-        }
-
-        function submitForm(event) {
-    event.preventDefault();
-
-    const formData = {
-        name: document.getElementById("name").value,
-        phone: document.getElementById("phone").value,
-        package: document.getElementById("package").value,
-        duration: document.getElementById("duration").value,
-        paymentType: document.getElementById("paymentType").value,
-        price: document.getElementById("totalPrice").innerText.replace("💵 السعر: ", "").replace(" ريال", "")
+      // Pricing data for each package
+      const prices = {
+      mix: { monthly: { 1: 399, 2: 299 }, cash: { 1: 4499, 2: 5299 } },
+      shamela: { monthly: { 1: 349, 2: 249 }, cash: { 1: 3850, 2: 4750 } },
+      asasiyah: { monthly: { 1: 279, 2: 199 }, cash: { 1: 3200, 2: 4200 } },
+      mobile: { monthly: { 1: 149, 2: 119 }, cash: { 1: 1668, 2: 2666 } }
     };
 
-    emailjs.send("service_vuewxyr", "template_t2jsw7c", formData)
-    .then(response => {
-        alert("✅ تم إرسال الطلب وإرسال إشعار عبر البريد الإلكتروني!");
-    })
-    .catch(error => {
-        alert("❌ حدث خطأ أثناء الإرسال.");
-        console.error(error);
-    });
-}
+    // Package names for display and English names for the auto-typed message
+    const packageNames = {
+      mix: "باقة المكس",
+      shamela: "الباقة الشاملة",
+      asasiyah: "الباقة الأساسية",
+      mobile: "باقة المحمول"
+    };
+
+    const packageNamesEnglish = {
+      mix: "Mix Package",
+      shamela: "Comprehensive Package",
+      asasiyah: "Standard Package",
+      mobile: "Mobile Package"
+    };
+
+    // Updates the price display for a given package box
+    function updatePriceForPackage(pkg) {
+      const duration = parseInt(document.getElementById("duration-" + pkg).value);
+      const paymentType = document.getElementById("paymentType-" + pkg).value;
+      const price = (paymentType === "monthly")
+                      ? prices[pkg].monthly[duration]
+                      : prices[pkg].cash[duration];
+      document.getElementById("price-" + pkg).innerHTML = `💵 السعر: ${price} ريال`;
+      updateGlobalConfirm();
+    }
+
+    // Get the selected package radio value
+    function getSelectedPackage() {
+      const radios = document.getElementsByName('selectedPackage');
+      for (const radio of radios) {
+        if (radio.checked) {
+          return radio.value;
+        }
+      }
+      return null;
+    }
+
+    // Update global confirmation button link based on selected package
+    function updateGlobalConfirm() {
+      const pkg = getSelectedPackage();
+      if (!pkg) return;
+      // Auto-type a simple message – adjust the text as needed
+      const msg = `I choose the ${packageNamesEnglish[pkg]} package, need more info pls.`;
+      const encodedMsg = encodeURIComponent(msg);
+      document.getElementById("globalConfirm").href = `https://api.whatsapp.com/send?phone=966126491000&text=${encodedMsg}`;
+    }
+
+    // Initialize each package's price display when the page loads and attach change listeners
+    window.onload = function() {
+      updatePriceForPackage('mix');
+      updatePriceForPackage('shamela');
+      updatePriceForPackage('asasiyah');
+      updatePriceForPackage('mobile');
+
+      // Update global confirmation button on any change
+      const selects = document.querySelectorAll('.price-options select');
+      selects.forEach(select => {
+        select.addEventListener('change', updateGlobalConfirm);
+      });
+
+      const radios = document.querySelectorAll('input[name="selectedPackage"]');
+      radios.forEach(radio => {
+        radio.addEventListener('change', updateGlobalConfirm);
+      });
+
+      // Set initial global confirmation link
+      updateGlobalConfirm();
+    };
     </script>
 
 </body>
