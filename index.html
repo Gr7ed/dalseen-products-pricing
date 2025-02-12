@@ -18,12 +18,12 @@
 <body>
     <div class="container mt-4 tajawal-regular">
         <h2 class="text-center my-4 tajawal-extrabold">اختر الباقة المناسبة لنشاطك التجاري</h2>
-        <div class="row g-3 justify-content-center">
+        <div class="row my-2 g-3 justify-content-center">
           <!-- Basic Package -->
           <div class="col-lg-3 col-md-6 col-sm-12 ">
             <div class="card shadow-sm p-2 ">
                 <div class="text-center background pt-2 rounded">
-                    <h3 class="my-3 ">الباقة الأساسية <img src="imgs/check.png" alt="check" width="30"></h3>
+                    <h3 class="my-3 ">الباقة الأساسية <img src="imgs/check.png" alt="check" width="40"></h3>
                     <img src="imgs/shamel-pack.jpg" class="img-fluid rounded" alt="الباقة الأساسية">
                 </div>
                 <ul class="list-group list-group-flush my-1 mx-2">
@@ -51,14 +51,18 @@
                 </div>
             </div>
         </div>
-        <!-- Shamela Package -->
-        <div class=" col-lg-3 col-md-6 col-sm-12">
-          <div class="card shadow-sm  p-2">
-              <div class="text-center background pt-2 rounded">
-                <h3 class="my-3">الباقة الشاملة <img src="imgs/improvement.png" alt="improve" width="40"></h3>
+      <!-- Shamela Package (Best Choice) -->
+      <div class="col-lg-3 col-md-6 col-sm-12">
+        <div class="card shadow-lg p-2">
+            <!-- Special Label -->
+            <div class="best-package-label">⭐ الباقة الأفضل</div>
+
+            <div class="text-center background pt-2 rounded">
+                <h3 class="my-3 text-white">الباقة الشاملة <img src="imgs/comp.png" alt="improve" width="50"></h3>
                 <img src="imgs/shamel-pack.jpg" class="img-fluid rounded" alt="الباقة الشاملة">
-              </div>
-              <ul class="list-group list-group-flush my-1 mx-2">
+            </div>
+            
+            <ul class="list-group list-group-flush my-1 mx-2">
                 <li class="list-group-item"><i class="bi bi-check-square icon-green"></i> شاشة لمس</li>
                 <li class="list-group-item"><i class="bi bi-check-square icon-green"></i> طابعة حرارية</li>
                 <li class="list-group-item"><i class="bi bi-check-square icon-green"></i> ماسح باركود</li>
@@ -66,33 +70,36 @@
                 <li class="list-group-item"><i class="bi bi-check-square icon-green"></i> جهاز كاشير متنقل</li>
                 <li class="list-group-item"><i class="bi bi-check-square icon-green"></i> نظام SAAED POS</li>
                 <li class="list-group-item"><i class="bi bi-check-square icon-green"></i> خدمة SAAED PAY</li>
-              </ul>
-              <div class="p-3">
-                  <label>📅 مدة الاشتراك:</label>
-                  <select id="duration-shamela" class="form-select mb-2" onchange="updatePriceForPackage('shamela')">
+            </ul>
+
+            <div class="p-3">
+                <label>📅 مدة الاشتراك:</label>
+                <select id="duration-shamela" class="form-select mb-2" onchange="updatePriceForPackage('shamela')">
                     <option value="1">سنة واحدة</option>
                     <option value="2">سنتان</option>
-                  </select>
+                </select>
 
-                  <label>💳 طريقة الدفع:</label>
-                  <select id="paymentType-shamela" class="form-select" onchange="updatePriceForPackage('shamela')">
-                        <option value="monthly">اشتراك شهري</option>
-                        <option value="cash">دفعة واحدة</option>
-                  </select>
+                <label>💳 طريقة الدفع:</label>
+                <select id="paymentType-shamela" class="form-select" onchange="updatePriceForPackage('shamela')">
+                    <option value="monthly">اشتراك شهري</option>
+                    <option value="cash">دفعة واحدة</option>
+                </select>
 
-                  <div class="fw-bold icon-green text-center fs-5 mt-2" id="price-shamela">💵 السعر: -</div>
-              </div>
-              <div class="text-center pb-3">
+                <div class="fw-bold icon-green text-center fs-5 mt-2" id="price-shamela">💵 السعر: -</div>
+            </div>
+
+            <div class="text-center pb-3">
                 <button class="btn background w-100 select-btn" name="selectedPackage" value="shamela">اختر هذه الباقة</button>
-              </div>
-          </div>
+            </div>
+        </div>
       </div>
+
         <!-- Mix Package -->
       <div class=" col-lg-3 col-md-6 col-sm-12">
           <div class="card shadow-sm  p-2">
               <div class="text-center background pt-2 rounded">
-                <h3 class="my-3">باقة مكس <img src="imgs/tablet.png" alt="smart" width="40"></h3>
-                <img src="imgs/v3mix-pack.jpg" class="img-fluid rounded" alt="الباقة الشاملة">
+                <h3 class="my-3">باقة مكس <img src="imgs\tablet.png" alt="tablet" width="50"></h3>
+                <img src="imgs/v3mix-pack.jpg" class="img-fluid rounded" alt="v3mix">
               </div>
               <ul class="list-group list-group-flush my-1 mx-2">
                     <li class="list-group-item"><i class="bi bi-check-square icon-green"></i> تابلت V3Mix</li>
@@ -125,7 +132,7 @@
       <div class=" col-lg-3 col-md-6 col-sm-12">
           <div class="card shadow-sm  p-2">
               <div class="text-center background pt-2 rounded">
-                <h3 class="my-3">باقة المحمول <img src="imgs/mobile.png" alt="smart" width="40"></h3>
+                <h3 class="my-3">باقة المحمول <img src="imgs/mobile.png" alt="smart" width="50"></h3>
                 <img src="imgs/mobile-pack.jpg" class="img-fluid rounded" alt="باقة المحمول">
               </div>
               <ul class="list-group list-group-flush my-1 mx-2">
