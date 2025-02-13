@@ -1,19 +1,42 @@
-
 const prices = {
-    mix: { monthly: { 1: 399, 2: 299 }, cash: { 1: 4499, 2: 5299 } },
-    shamela: { monthly: { 1: 349, 2: 249 }, cash: { 1: 3850, 2: 4750 } },
-    asasiyah: { monthly: { 1: 279, 2: 199 }, cash: { 1: 3200, 2: 4200 } },
-    mobile: { monthly: { 1: 149, 2: 119 }, cash: { 1: 1668, 2: 2666 } }
+    mix: { 
+        monthly: { 1: 399, 2: 299 }, 
+        cash: { 1: { old: 4499, new: 4299 }, 2: { old: 5299, new: 4799 } } 
+    },
+    shamela: { 
+        monthly: { 1: 349, 2: 249 }, 
+        cash: { 1: { old: 3849, new: 3649 }, 2: { old: 4749, new: 4249 } } 
+    },
+    asasiyah: { 
+        monthly: { 1: 297, 2: 199 }, 
+        cash: { 1: 3199, 2: 4199 } 
+    },
+    mobile: { 
+        monthly: { 1: 149, 2: 119 }, 
+        cash: { 1: 1668, 2: 2666 } 
+    }
 };
 
 let selectedPackage = null;
 let duration;
 let paymentType;
+
 function updatePriceForPackage(pkg) {
     duration = parseInt(document.getElementById("duration-" + pkg).value);
     paymentType = document.getElementById("paymentType-" + pkg).value;
-    const price = prices[pkg][paymentType][duration];
-    document.getElementById("price-" + pkg).innerHTML = `💵 السعر: ${price} ريال`;
+    
+    let priceText = "";
+    
+    if (prices[pkg][paymentType][duration] && typeof prices[pkg][paymentType][duration] === "object") {
+        const oldPrice = prices[pkg][paymentType][duration].old;
+        const newPrice = prices[pkg][paymentType][duration].new;
+        priceText = `💵 السعر: <span class="text-decoration-line-through warning-color">${oldPrice} ريال</span> ${newPrice} ريال`;
+    } else {
+        const price = prices[pkg][paymentType][duration];
+        priceText = `💵 السعر: ${price} ريال`;
+    }
+
+    document.getElementById("price-" + pkg).innerHTML = priceText;
 }
 
 function selectPackage(button) {
@@ -41,7 +64,14 @@ function redirectToWhatsApp() {
         cash: "كاش/نقدي",
     };
 
-    const msg = `لقد اخترت ${packageNamesArabic[selectedPackage]} لمدة ${duration} سنة، طريقة الدفع: ${paymentTypeArabic[paymentType]} بسعر ${prices[selectedPackage][paymentType][duration]}  ريال. أرغب في الحصول على المزيد من المعلومات `;
+    let finalPrice;
+    if (prices[selectedPackage][paymentType][duration] && typeof prices[selectedPackage][paymentType][duration] === "object") {
+        finalPrice = prices[selectedPackage][paymentType][duration].new;
+    } else {
+        finalPrice = prices[selectedPackage][paymentType][duration];
+    }
+
+    const msg = `لقد اخترت ${packageNamesArabic[selectedPackage]} لمدة ${duration} سنة، طريقة الدفع: ${paymentTypeArabic[paymentType]} بسعر ${finalPrice} ريال. أرغب في الحصول على المزيد من المعلومات `;
     const encodedMsg = encodeURIComponent(msg);
     
     // Redirect the user to WhatsApp
@@ -58,4 +88,3 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 });
-
