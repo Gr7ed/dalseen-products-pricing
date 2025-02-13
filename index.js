@@ -30,10 +30,10 @@ function updatePriceForPackage(pkg) {
     if (prices[pkg][paymentType][duration] && typeof prices[pkg][paymentType][duration] === "object") {
         const oldPrice = prices[pkg][paymentType][duration].old;
         const newPrice = prices[pkg][paymentType][duration].new;
-        priceText = `💵 السعر: <span class="text-decoration-line-through warning-color">${oldPrice} ريال</span> ${newPrice} ريال`;
+        priceText = `💵 السعر: <span class="text-decoration-line-through warning-color">${oldPrice} ر.س</span> ${newPrice} ر.س`;
     } else {
         const price = prices[pkg][paymentType][duration];
-        priceText = `💵 السعر: ${price} ريال`;
+        priceText = `💵 السعر: ${price} ر.س`;
     }
 
     document.getElementById("price-" + pkg).innerHTML = priceText;
@@ -71,7 +71,7 @@ function redirectToWhatsApp() {
         finalPrice = prices[selectedPackage][paymentType][duration];
     }
 
-    const msg = `لقد اخترت ${packageNamesArabic[selectedPackage]} لمدة ${duration} سنة، طريقة الدفع: ${paymentTypeArabic[paymentType]} بسعر ${finalPrice} ريال. أرغب في الحصول على المزيد من المعلومات `;
+    const msg = `لقد اخترت ${packageNamesArabic[selectedPackage]} لمدة ${duration} سنة، طريقة الدفع: ${paymentTypeArabic[paymentType]} بسعر ${finalPrice} ر.س. أرغب في الحصول على المزيد من المعلومات `;
     const encodedMsg = encodeURIComponent(msg);
     
     // Redirect the user to WhatsApp

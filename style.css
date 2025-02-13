@@ -37,7 +37,10 @@ background-color: #35ac72;
 color: #fff;
 }
 
-
+.grey-color{
+   background: #D9EDE3;
+   color: #343a40 ;
+}
 footer {
      background-color: #343a40; color: #fff; padding: 20px 0; margin-top: 40px; text-align: center; 
     }
@@ -55,6 +58,28 @@ footer a:hover {
         color: #fff;
     }
 
+/* Best Package Label (Ribbon Style) */
+.best-package-label {
+  position:absolute;
+  top: -10px;
+  right: -10px;
+  background: #ffd700; /* Gold Color */
+  color: black;
+  padding: 5px 12px;
+  font-size: 0.9rem;
+  font-weight: bold;
+  border-radius: 5px;
+  transform: rotate(-10deg);
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+.discount-label {
+  font-size: 12px;
+  font-weight: bold;
+  /* z-index: 10; */
+}
+.warning-color {
+  color: #ff0707;
+}
 
       
 .tajawal-light {
@@ -95,23 +120,7 @@ footer a:hover {
 
 
 
-/* Best Package Label (Ribbon Style) */
-.best-package-label {
-  position: absolute;
-  top: -10px;
-  right: -10px;
-  background: #ffd700; /* Gold Color */
-  color: black;
-  padding: 5px 12px;
-  font-size: 0.9rem;
-  font-weight: bold;
-  border-radius: 5px;
-  transform: rotate(-10deg);
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-}
-.warning-color {
-  color: #ff0707;
-}
+
 
 
 
